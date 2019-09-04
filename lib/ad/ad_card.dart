@@ -37,12 +37,12 @@ class AdCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Image.asset('assets/appetizer-bowl-delicious-1640772.jpg',
-                    height: 200, width: 300, fit: BoxFit.contain),
+                    height: 180, width: 300, fit: BoxFit.contain),
                 SizedBox(
-                  height: 50,
+                  height: 5,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

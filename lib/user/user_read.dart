@@ -1,4 +1,8 @@
 import 'package:ad_app/user/user_appbar.dart';
+import 'package:ad_app/user/user_create_residence.dart';
+import 'package:ad_app/user/user_download_read.dart';
+import 'package:ad_app/user/user_plusstore_list.dart';
+import 'package:ad_app/user/user_plusstore_read.dart';
 import 'package:flutter/material.dart';
 
 class UserRead extends StatefulWidget {
@@ -40,9 +44,18 @@ class _UserReadState extends State<UserRead> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-            FlatButton(child: Text('쿠폰함', textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0),),onPressed: () {}),
-            FlatButton(child: Text('즐겨찾기한 매장', textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0),),onPressed: () {},),
-            FlatButton(child: Text('거주지 변경',textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0),),onPressed: () {},),
+            FlatButton(child: Text('쿠폰함', textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0),),onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => UserDownloadList()));
+            }),
+            FlatButton(child: Text('즐겨찾기한 매장', textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0),),onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => UserPlusstoreRead()));
+            },),
+            FlatButton(child: Text('거주지 변경',textAlign: TextAlign.left, style: TextStyle(fontSize: 20.0),),onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => UserCreateResidence("수정")));
+            },),
           ],),
         ],
       )

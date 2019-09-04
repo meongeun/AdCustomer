@@ -27,7 +27,7 @@ class AdCutomerPage extends StatefulWidget {
 class _AdCutomerPageState extends State<AdCutomerPage> {
   void navigate() {
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => UserCreateResidence()));
+        .push(MaterialPageRoute(builder: (context) => UserCreateResidence("저장")));
   }
 
   @override

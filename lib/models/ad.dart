@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class Ad {
   String kind, name, menu, repeat;
   int price, startDiscount, timeGap, discountGap, startNum, plusOne, plusTwo, storeId, storeUserId;
@@ -5,6 +7,10 @@ class Ad {
   bool full;
 
 
+  Ad({@required this.kind, @required this.name, @required this.menu, @required this.repeat, @required this.price,
+  @required this.startDiscount, this.timeGap, this.discountGap, this.startNum,
+      this.plusOne, this.plusTwo, @required this.storeId, @required this.storeUserId,
+  @required this.startTime, @required this.endTime, @required this.startDay, @required this.endDay, @required this.full});
 
   Ad.fromJson(Map map) {
     this.kind = map['kind'];

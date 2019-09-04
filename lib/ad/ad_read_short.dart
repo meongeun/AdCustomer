@@ -1,11 +1,11 @@
-import 'package:ad_app/review/review_read.dart';
+
 import 'package:ad_app/user/user_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import 'ad_card.dart';
 import 'ad_read_long.dart';
-import 'menu_items.dart';
+import 'package:ad_app/user/menu_items.dart';
 
 class AdReadShort extends StatefulWidget {
   @override
@@ -28,9 +28,7 @@ class _AdReadShortState extends State<AdReadShort> {
           items: <Widget>[
             AdCard(storeName:storeName, menuName: menuName, counter: counter, discount: discount )
           ],
-        )
-
-
+        ),
       ],
     );
 
